@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Drag and Drop Integration</title>
+	<script src="D:/ck/ckeditor/ckeditor.js"></script>
+
+</head>
+
+<body>
+    <textarea name="editor1" id="editor1" rows="10" cols="80">
+        This is my textarea to be replaced with CKEditor.
+    </textarea>
+    <script>
+        // Replace the <textarea id="editor1"> with a CKEditor
+        // instance, using default configuration.
+        CKEDITOR.replace( 'editor1' );
+    </script>
+</body>
+
+<script>
+CKEDITOR.on( 'dragstart', function( evt ) {
+    console.log(222);
+    // var target = evt.data.target;
+
+    // if ( WidgetRepository.isDomDragHandler( target ) ) {
+    //     evt.data.dataTransfer.setData( 'cke/widget-id', widget.id );
+    // }
+} );
+</script>
+</html>
